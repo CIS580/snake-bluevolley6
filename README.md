@@ -1,6 +1,5 @@
 # Snake Game
-An implementation of the classic [Snake game](https://en.wikipedia.org/wiki/Snake_(video_game)) in HTML5,
-created for the Fall 2016 class of CIS 580 at Kansas State University.
+An implementation of the classic [Snake game](https://en.wikipedia.org/wiki/Snake_(video_game)) in HTML5, created for the Fall 2016 class of CIS 580 at Kansas State University.
 
 ## Requirements
 The game is implemented in JavaScript using the HTML5 canvas element using the provided game framework.
@@ -14,8 +13,15 @@ The game is implemented in JavaScript using the HTML5 canvas element using the p
 7. Periodically, an apple (image or arc) appears on-screen.  If the snake's head collides with it, the user gains points in their score (10 points)
 8. The player's current score appears on-screen (this can be done with the canvas's draw-text method, or with an html element overlaying the canvas) (10 points)
 9. Periodically, the snake grows an extra segment.  This can either be timed, or triggered by eating an apple, or similar mechanism.  The segment should appear at the end of the snake and behave like the existing segments (10 points)
-10. Instructions for playing the made should be made available to the player. At a minimum, these should be incorporated into the webpage below the canvas, though they could also be displayed within the canvas using the drawText method or an HTML element overlaying the canvas.  If either of the latter is done, the game should pause while they are displayed (10 points)
+10. Instructions for playing the game should be made available to the player. At a minimum, these should be incorporated into the webpage below the canvas, though they could also be displayed within the canvas using the drawText method or an HTML element overlaying the canvas.  If either of the latter is done, the game should pause while they are displayed (10 points)
 
 ## Extra Credit
 1. You may optionally implement obstacles within the game's area.  Should the snake collide with one, the game should end. (10)
 2. A bonus of 10 points is available for exceptionally polished game implementations.
+
+
+Notes:
+if (distance^2 < (r1+r2)^2) you have a collision when dealing with circles
+distance^2 = (x1 - x2)^2 + (y1-y2)^2
+
+For Squares !(Abottom > Btop || Atop < Bbottom || Aleft > Bright || Aright < Bleft)
