@@ -18,10 +18,3 @@ The game is implemented in JavaScript using the HTML5 canvas element using the p
 ## Extra Credit
 1. You may optionally implement obstacles within the game's area.  Should the snake collide with one, the game should end. (10)
 2. A bonus of 10 points is available for exceptionally polished game implementations.
-
-
-Notes:
-if (distance^2 < (r1+r2)^2) you have a collision when dealing with circles
-distance^2 = (x1 - x2)^2 + (y1-y2)^2
-
-For Squares !(Abottom > Btop || Atop < Bbottom || Aleft > Bright || Aright < Bleft)
