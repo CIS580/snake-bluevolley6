@@ -14,7 +14,7 @@ var appleX;
 var appleY;
 var score = 0;
 var snake = [];
-snake[0] = {x: 10, y:30};
+snake[0] = {x: 30, y:30};
 
 var input = {
   up: false,
@@ -102,8 +102,8 @@ function loop(newTime) {
 function update(elapsedTime) {
   // TODO: Spawn an apple periodically
   if(applePlaced == false) {
-    appleX = Math.floor(Math.random() * (backBuffer.width-5));
-    appleY = Math.floor(Math.random() * (backBuffer.height-5));
+    appleX = Math.floor(Math.random() * (backBuffer.width-10));
+    appleY = Math.floor(Math.random() * (backBuffer.height-10));
     applePlaced = true;
     appleEaten = false;
   }
@@ -130,11 +130,11 @@ function update(elapsedTime) {
     }
   }
   // TODO: Determine if the snake has moved out-of-bounds (offscreen)
-  if(snake[0].x < 0 || (snake[0].x + 5) > backBuffer.width || snake[0].y < 0 || (snake[0].y + 5) > backBuffer.height) {
+  if(snake[0].x < 0 || (snake[0].x + 10) > backBuffer.width || snake[0].y < 0 || (snake[0].y + 10) > backBuffer.height) {
     gameOver = true;
   }
   // TODO: Determine if the snake has eaten an apple
-  if (snake[0].x < appleX + 5 && snake[0].x + 5 > appleX && snake[0].y < appleY + 5 && 5 + snake[0].y > appleY) {
+  if (snake[0].x < appleX + 10 && snake[0].x + 10 > appleX && snake[0].y < appleY + 10 && 10 + snake[0].y > appleY) {
       appleEaten = true;
   }
   // TODO: Determine if the snake has eaten its tail
@@ -164,12 +164,12 @@ function render(elapsedTime) {
   // TODO: Draw the game objects into the backBuffer
   backCtx.fillStyle = "Green";
   for(i = 0; i < snake.length; i++) {
-    backCtx.fillRect(snake[i].x, snake[i].y, 5, 5);
+    backCtx.fillRect(snake[i].x, snake[i].y, 10, 10);
   }
 
   if(applePlaced == true && appleEaten == false) {
     backCtx.fillStyle = "Red";
-    backCtx.fillRect(appleX, appleY, 5, 5);
+    backCtx.fillRect(appleX, appleY, 10, 10);
   }
 
   if(gameOver) {
